@@ -1,0 +1,44 @@
+@(books:Seq[Book])
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Book Edit History</title>  
+        
+    </head>
+    <body>
+
+
+    <div id="actions">
+        <a class="btn success" id="add" href="@routes.HomeController.index">Back</a>
+    </div>
+            
+        <table class="books zebra-striped">
+            <thead>
+                <tr>
+                	<th>Version</th>
+                	<th>ISBN</th>
+                    <th>Book name</th>
+                    <th>Author</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @for(book <- books) {
+                        <tr>
+                        	<td>@book.version</td>
+                            <td>@book.id</td>
+                            <td>@book.name</td>
+                            <td>
+                                @book.author
+                            </td>
+                            <td>
+                                @book.description
+                            </td>
+                        </tr>
+                    }
+            </tbody>
+        </table>
+       </body>
+ </html>

@@ -1,0 +1,50 @@
+@(bookForm: Form[Book])
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add Book</title>
+        
+    </head>
+    <body>
+    <h1>Add new Book</h1>
+    
+	<form role="form" action="@routes.HomeController.save()" method="post">
+        
+                <div class="row">
+                    <div class="form-group col-sm-4 col-sm-push-4">
+                        <label for="id">ISBN</label>
+                        <input type="number" class="form-control" name="id">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-sm-4 col-sm-push-4">
+                        <label for="name">Book Name</label>
+                        <input type="text" class="form-control" name="name">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-sm-4 col-sm-push-4">
+                        <label for="author">Author</label>
+                        <input type="text" class="form-control" name="author">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-sm-4 col-sm-push-4">
+                        <label for="description">Description</label>
+                        <input type="text" class="form-control" name="description">
+                    </div>
+                </div>
+
+		        <div class="actions">
+    		        <input type="submit" value="Add new book" class="btn primary"> or 
+        		    <a href="@routes.HomeController.index" class="btn">Cancel</a>
+       			 </div>
+        
+      </form>
+    
+    </body>
+</html>
+    

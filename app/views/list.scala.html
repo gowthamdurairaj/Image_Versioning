@@ -1,0 +1,46 @@
+@(books:Seq[Book])
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Book Versioning</title>  
+        
+    </head>
+    <body>
+
+
+    <div id="actions">
+        <a class="btn success" id="add" href="@routes.HomeController.create()">Add a new book</a>
+    </div>
+            
+        <table class="books zebra-striped">
+            <thead>
+                <tr>
+                	<th>ISBN</th>
+                    <th>Book name</th>
+                    <th>Author</th>
+                    <th>Description</th>
+                    <th>Edit</th>
+                    <th>History</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @for(book <- books) {
+                        <tr>
+                            <td>@book.id</td>
+                            <td>@book.name</td>
+                            <td>
+                                @book.author
+                            </td>
+                            <td>
+                                @book.description
+                            </td>
+                            <td><a href="@routes.HomeController.edit(book.id.get,book.version.get)">Edit</a></td>
+                            <td><a href="@routes.HomeController.getHistory(book.id.get)">History</a></td>
+                        </tr>
+                    }
+            </tbody>
+        </table>
+       </body>
+ </html>

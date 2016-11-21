@@ -1,0 +1,42 @@
+@(id: Long, version: Long, bookForm: Form[Book] )
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Edit Book</title>
+    </head>
+    <body>
+    <h1>Edit book with ISBN @id</h1>
+
+	<form role="form" action="@routes.HomeController.update(id,version)" method="post">
+        
+                <div class="row">
+                    <div class="form-group col-sm-4 col-sm-push-4">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" name="name">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-sm-4 col-sm-push-4">
+                        <label for="author">Author</label>
+                        <input type="text" class="form-control" name="author">
+                    </div>
+                </div> 
+                
+                <div class="row">
+                    <div class="form-group col-sm-4 col-sm-push-4">
+                        <label for="description">Description</label>
+                        <input type="text" class="form-control" name="description">
+                    </div>
+                </div>       
+
+        		<div class="actions">
+        		    <input type="submit" value="Update book details" class="btn primary"> or 
+        		    <a href="@routes.HomeController.index" class="btn">Cancel</a>
+        		</div>
+        
+        </form>
+        
+	</body>
+</html>

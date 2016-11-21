@@ -1,0 +1,7 @@
+New log file opened at Thu Nov 17 14:39:10 IST 2016 by 31467@985aeb8e89e0.ant.amazon.com
+Taking next connection to: 52979
+New client attempting to connect on port: 52980-52979
+  Address = /10.45.173.61:52979
+This client on port 52980 has uuid f4b1e13e-ab36-4c51-89fe-0943f102ad4f configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-f4b1e13e-ab36-4c51-89fe-0943f102ad4f
+Taking next connection to: 52979
